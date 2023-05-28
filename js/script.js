@@ -106,8 +106,9 @@ function asideSectionTooglerBtn()
 })();
 
 window.onload = function() {
+  showSection(navList[0].querySelector('a'))
   document.querySelector('.contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
+      event.preventDefault()
       emailjs.sendForm('contact_service', 'contact_form', this)
           .then(function() {
               document.querySelector('#face-smile').classList.add('hidden')
